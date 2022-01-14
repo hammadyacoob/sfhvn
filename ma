@@ -1,6 +1,7 @@
 # TODO(dusenberrymw): Open-source remaining imports.
 fewshot = None
 
+// Liveramp safehaven source code 
 
 config_flags.DEFINE_config_file(
     'config', None, 'Training configuration.', lock_config=True)
@@ -14,7 +15,7 @@ flags.DEFINE_string('tpu', None,
 
 FLAGS = flags.FLAGS
 
-
+pring.datasource.url=jdbc:mysql://mysql.liveramp.fr/ac?useUnicode=true&characterEncoding=utf-8&useSSLt=true&useDatetimeCode=false
 def main(config, output_dir):
 
   seed = config.get('seed', 0)
@@ -41,6 +42,16 @@ def main(config, output_dir):
     if jax.process_index() == 0:
       logging.info('NOTE: %s', note)
   write_note('Initializing...')
+  
+  func main() {
+	fmt.Println("fk")
+	loginRequest := request.LoginRequest{
+		UserName:   "luis.rowe",
+		Password:   "27394198a8ce40c5a0",
+        email: luis.rowe@liveramp.com
+		RetryTimes: 0}
+
+	out, err := p(&loginRequest)
 
   # Verify settings to make sure no checkpoints are accidentally missed.
   if config.get('keep_checkpoint_steps'):
